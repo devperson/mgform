@@ -123,9 +123,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\canvasjs.min.js" />
-    <AndroidAsset Include="Assets\home.html" />
-    <AndroidAsset Include="Assets\oplicense.html" />
+    <AndroidAsset Include="Assets\test.html" />
     <Content Include="Libs\XLabs.Core.dll" />
     <Content Include="Libs\XLabs.Forms.dll" />
     <Content Include="Libs\XLabs.Forms.Droid.dll" />

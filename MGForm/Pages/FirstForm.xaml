@@ -7,7 +7,7 @@
   <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="4">
     <controls:HybridWebView x:Name="hybridWebView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
     </controls:HybridWebView>
-    <Button Text="Save changes"/>
+    <Button x:Name="btnShowMsg" Text="Save changes"/>
   </StackLayout>
   
 </ContentPage>
