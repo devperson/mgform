@@ -14,9 +14,17 @@
             padding: 15px;           
         }
     </style>
+
+    <script language="javascript">
+    function onSaveData() {
+        var user = angular.element('#indexController').scope().GetUser();
+        Native("dataCallback", user);
+    }
+    </script>
+
 </head>
 <body class="container-fluid" style="padding:5px; background-color: #FDFDFD;">    
-    <div data-ng-controller="indexController">
+    <div id="indexController" data-ng-controller="indexController">
         <div class="container-fluid" style="padding:0">
             <form role="form" class="form-horizontal">
 
@@ -26,14 +34,14 @@
                     </strong>
                 </h4>
 
-                <div class="box">                    
+                <div class="box">
                     <div class="form-group">
-                        <div class="col-xs-6"><label>Name</label><input type="text" class="form-control"></div>
-                        <div class="col-xs-6"><label>Home address</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6"><label>Name</label><input type="text" class="form-control" ng-model="user.Name"></div>
+                        <div class="col-xs-6"><label>Home address</label><input type="text" class="form-control" ng-model="user.HomeAdr"></div>
                     </div>
                     <div class="form-group">
-                        <div class="col-xs-6"><label>Home telephone No</label><input type="text" class="form-control"></div>
-                        <div class="col-xs-6"><label>Work telephone No</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6"><label>Home telephone No</label><input type="text" class="form-control" ng-model="user.HomePhone"></div>
+                        <div class="col-xs-6"><label>Work telephone No</label><input type="text" class="form-control" ng-model="user.WorkPhone"></div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-6"><label>Mobile</label><input type="text" class="form-control"></div>
@@ -81,7 +89,7 @@
                         <u>Witness contact details (Not Disclosable)</u>
                     </strong>
                 </h4>
-                <div class="box" >                   
+                <div class="box">
                     <div style="padding-top:20px">
                         <div class="form-group">
                             <div class="col-xs-12">
@@ -113,7 +121,7 @@
                                         <option value="No">No</option>
                                     </select>
                                     <em style="font-weight: normal;">‘Yes’ submit MG2 with file in anticipated not guilty, contested or indictable only cases.</em>
-                                </label>                                
+                                </label>
                             </div>
                         </div>
 
@@ -256,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="box" style="margin-top:20px;margin-bottom:20px; background-color:transparent">
                     <div class="form-group">
                         <div class="col-xs-6"><label>Statement taken by</label><input type="text" class="form-control"></div>
@@ -268,9 +276,9 @@
                     </div>
                 </div>
             </form>
-            <div style="margin:10px">
-                <button type="submit" class="btn btn-primary center-block" ng-click="SubmitForm(user)">Submit</button>
-            </div>
+            <!--<div style="margin:10px">
+                <button type="submit" class="btn btn-primary center-block" onclick="onSaveData()" >Submit</button>
+            </div>-->
         </div>
     </div>
 
