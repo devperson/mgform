@@ -26,17 +26,20 @@ namespace MGForm.Pages
             {
                 this.hybridWebView.CallJsFunction("onSaveData");
             };
+
+            this.hybridWebView.RegisterCallback("dataCallback", t =>
+            {
+                var witnessContacts = JsonConvert.DeserializeObject<WitnessContacts>(t);
+
+                DisplayAlert("MG11 form", "The Statement has been saved!", "Close");
+            });
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            this.hybridWebView.RegisterCallback("dataCallback", t =>
-            {
-                var data = JsonConvert.DeserializeObject<WitnessContacts>(t);
-                DisplayAlert("MG11 form", "The Statement has been saved!", "Close");
-            });
+            
             this.hybridWebView.LoadFromContent("Html/Form.html");
         }
     }
