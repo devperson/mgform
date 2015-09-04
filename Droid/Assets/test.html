@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Testing CanvasJS with Xamarin C# bridge</title>
+    <script language="javascript">
+        function onSaveData() {
+            var f = document.getElementById("txtFirst").value;
+            var s = document.getElementById("txtSecond").value;
+            var th = document.getElementById("txtThird").value;
+            var fo = document.getElementById("txtThird").value;
+            Native("dataCallback", {"FirstTxt":f, "SecondTxt":s,"ThirdTxt":th, "Fourth":fo });
+        }
+    </script>
+
+</head>
+<body>
+    
+    First textbox: <input id="txtFirst" type="text" /> </br> </br>
+    Second textbox: <input id="txtSecond" type="text" /></br></br>
+    Third textbox: <input id="txtThird" type="text" /></br></br>
+    Fourth textbox: <input id="txtFour" type="text" /></br></br>
+</body>
+</html>
+
