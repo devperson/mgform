@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="MGForm.cs" />
+    <Compile Include="Models\WitnessContacts.cs" />
     <Compile Include="Pages\FirstForm.xaml.cs">
       <DependentUpon>FirstForm.xaml</DependentUpon>
     </Compile>
