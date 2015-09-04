@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MGForm.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -33,19 +34,13 @@ namespace MGForm.Pages
 
             this.hybridWebView.RegisterCallback("dataCallback", t =>
             {
-                var data = JsonConvert.DeserializeObject<SomeData>(t);
-                DisplayAlert("Data from browser", string.Format("{0}, {1}, {2}, {3}", data.FirstTxt, data.SecondTxt, data.ThirdTxt, data.Fourth), "Close");
+                var data = JsonConvert.DeserializeObject<WitnessContacts>(t);
+                DisplayAlert("MG11 form", "The Statement has been saved!", "Close");
             });
-            this.hybridWebView.LoadFromContent("test.html");
+            this.hybridWebView.LoadFromContent("Html/Form.html");
         }
     }
 
-    public class SomeData
-    {
-        public string FirstTxt { get; set; }
-        public string SecondTxt { get; set; }
-        public string ThirdTxt { get; set; }
-        public string Fourth { get; set; }
-    }
+    
 
 }
