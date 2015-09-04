@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html ng-app="clientApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>HTML Form</title>
+    <link rel='stylesheet' href='content/bootstrap/css/bootstrap.min.css' />    
+</head>
+<body class="container">
+    <h1>HTML Form</h1>
+    <p>Welcome to HTML Form</p>
+
+
+    <div data-ng-controller="indexController" class="container">
+        <div >
+            <form role="form">
+                <div class="form-group">
+                    <label for="fn">First Name:</label>
+                    <input type="text" class="form-control" id="fn" ng-model="user.firstName">
+                </div>
+                <div class="form-group">
+                    <label for="ln">Last Name:</label>
+                    <input type="text" class="form-control" id="ln" ng-model="user.lastName">
+                </div>
+                <div class="form-group">
+                    <label for="mn">Middle Name:</label>
+                    <input type="text" class="form-control" id="mn" ng-model="user.middleName">
+                </div>
+
+                <button type="submit" class="btn btn-default" ng-click="SubmitForm(user)">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/indexController.js"></script>
+</body>
+</html>
