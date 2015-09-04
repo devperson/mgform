@@ -123,9 +123,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\canvasjs.min.js" />
-    <AndroidAsset Include="Assets\home.html" />
-    <AndroidAsset Include="Assets\oplicense.html" />
+    <AndroidAsset Include="Assets\test.html" />
     <AndroidAsset Include="Assets\Html\libs\jquery.min.js" />
     <AndroidAsset Include="Assets\Html\libs\angular.min.js" />
     <AndroidAsset Include="Assets\Html\js\indexController.js" />

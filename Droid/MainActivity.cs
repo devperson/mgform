@@ -17,7 +17,7 @@ using XLabs.Serialization.ServiceStack;
 
 namespace MGForm.Droid
 {
-	[Activity (Label = "MGForm.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "MGForm.Droid", Icon = "@drawable/icon", MainLauncher = true, WindowSoftInputMode = SoftInput.AdjustPan, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : XFormsApplicationDroid
 	{
 		protected override void OnCreate (Bundle bundle)
