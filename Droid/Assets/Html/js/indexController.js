@@ -1,10 +1,15 @@
 angular.module('clientApp').controller('indexController', ['$scope', function ($scope)
 {
-
-   
-    $scope.SubmitForm = function (user)
-    {
-        alert(JSON.stringify(user));
-    };
     
+    $scope.GetUser = function () {
+        return JSON.stringify($scope.user);
+    };
+
+    //$scope.SubmitForm = function (user)
+    //{
+    //    alert(JSON.stringify(user));
+    //};
+    
+
 } ]);
+
