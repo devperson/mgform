@@ -257,32 +257,20 @@
                     </div>
                 </div>
                
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <label>
-                            Statement taken by
-                            <input type="text" class="form-control">
-                        </label>
+                <div class="box" style="margin-top:20px;margin-bottom:20px; background-color:transparent">
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Statement taken by</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6"><label>Station</label><input type="text" class="form-control"></div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <label>
-                            Station
-                            <input type="text" class="form-control">
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <label>
-                            Time and place statement taken
-                            <input type="text" class="form-control">
-                        </label>
+                    <div class="form-group">
+                        <label class="col-xs-12" for="TextArea">Time and place statement taken</label>
+                        <div class="col-xs-12"><input type="text" class="form-control"></div>
                     </div>
                 </div>
             </form>
-            <button type="submit" class="btn btn-primary" ng-click="SubmitForm(user)">Submit</button>
+            <div style="margin:10px">
+                <button type="submit" class="btn btn-primary center-block" ng-click="SubmitForm(user)">Submit</button>
+            </div>
         </div>
     </div>
 
