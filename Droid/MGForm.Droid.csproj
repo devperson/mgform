@@ -107,6 +107,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap-theme.css.map" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap.css.map" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -128,14 +134,14 @@
     <AndroidAsset Include="Assets\Html\libs\angular.min.js" />
     <AndroidAsset Include="Assets\Html\js\indexController.js" />
     <AndroidAsset Include="Assets\Html\js\application.js" />
-    <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap-responsive.css" />
-    <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap-responsive.min.css" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap-theme.css" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap-theme.min.css" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap.css" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\css\bootstrap.min.css" />
-    <AndroidAsset Include="Assets\Html\content\bootstrap\img\glyphicons-halflings-white.png" />
-    <AndroidAsset Include="Assets\Html\content\bootstrap\img\glyphicons-halflings.png" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\bootstrap.js" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\bootstrap.min.js" />
+    <AndroidAsset Include="Assets\Html\content\bootstrap\js\npm.js" />
     <Content Include="Libs\XLabs.Core.dll" />
     <Content Include="Libs\XLabs.Forms.dll" />
     <Content Include="Libs\XLabs.Forms.Droid.dll" />

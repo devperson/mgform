@@ -6,17 +6,284 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <title>HTML Form</title>
     <link rel='stylesheet' href='content/bootstrap/css/bootstrap.min.css' />    
+    <style>
+        .box{
+            background-color:#F7F5F5; 
+            border: 1px solid#E6E6E6;
+            border-radius: 4px 4px 0 0;
+            padding: 15px;           
+        }
+    </style>
 </head>
-<body class="container">
-    <h1>HTML Form</h1>
-    <p>Welcome to HTML Form</p>
+<body class="container-fluid" style="padding:5px; background-color: #FDFDFD;">    
+    <div data-ng-controller="indexController">
+        <div class="container-fluid" style="padding:0">
+            <form role="form" class="form-horizontal">
 
+                <h4>
+                    <strong>
+                        <u>Witness contact details (Not Disclosable)</u>
+                    </strong>
+                </h4>
 
-    <div data-ng-controller="indexController" class="container">
-        <div >
-            <form role="form">
+                <div class="box">                    
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Name</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6"><label>Home address</label><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Home telephone No</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6"><label>Work telephone No</label><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Mobile</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6"><label> E-mail address</label><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12" for="TextArea">Preferred means of contact</label>
+                        <div class="col-xs-12"><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12" for="TextArea">Best time to contact</label>
+                        <div class="col-xs-12"><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="padding-right:0"><label>Gender</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-10" style="padding:0">
+                            <label class="col-xs-12">Date and place of birth</label>
+                            <div class="col-xs-4" style="padding-right:0">
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Former name</label><input type="text" class="form-control"></div>
+                        <div class="col-xs-6">
+                            <label>Ethnicity Code (16 + 1)</label>
+                            <select class="form-control" ng-model="user.ethnicityCode">
+                                <option value="British W1">British W1</option>
+                                <option value="Irish W2">Irish W2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 style="margin-top:30px;">
+                    <strong>
+                        DATES OF WITNESS <u>NON-AVAILABILITY:</u>
+                    </strong>
+                </h5>
+                <h4>
+                    <strong>
+                        <u>Witness contact details (Not Disclosable)</u>
+                    </strong>
+                </h4>
+                <div class="box" >                   
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    Is the witness willing to attend court?
+                                    <select class="form-control" ng-model="user.ethnicityCode">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <em style="font-weight: normal;">‘No’, include reason(s) on form MG6.</em>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-6" for="attend">What can be done to ensure attendance? </label>
+                            <div class="col-xs-6">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    Does the witness require a Special Measures Assessment as a vulnerable or intimidated witness?
+                                    <em>
+                                        (youth under 18; witness with mental disorder, learning or physical disability; or witness in fear of giving evidence or witness is the complainant in a sexual offence case)
+                                    </em>
+                                    <select class="form-control" ng-model="user.specialMeasuresAssessment">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <em style="font-weight: normal;">‘Yes’ submit MG2 with file in anticipated not guilty, contested or indictable only cases.</em>
+                                </label>                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    Does the witness have any particular needs?
+                                    <select class="form-control" ng-model="user.specialMeasuresAssessment">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    If ‘Yes’ what are they?
+                                    <em>
+                                        (Disability, healthcare, childcare, transport, disability, language difficulties, visually impaired, restricted mobility or other concerns?).
+                                    </em>
+                                    <input type="text" class="form-control">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top:30px;">
+                    <strong>
+                        <u>Witness Consent (for witness completion)</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                The Victim Personal Statement scheme (victims only) has been explained to me
+                                <select class="form-control" ng-model="user.ethnicityCode">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                I have been given the Victim Personal Statement leaflet
+                                <select class="form-control" ng-model="user.ethnicityCode">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                I have been given the leaflet “Giving a witness statement to the police…”
+                                <select class="form-control" ng-model="user.ethnicityCode">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                I consent to police having access to my medical record(s) in relation
+                                to this matter (obtained in accordance with local practice)
+                                <select class="form-control" ng-model="user.ethnicityCode">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="N/A">N/A</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                I consent to my medical record in relation to this matter being disclosed
+                                to the defence
+                                <select class="form-control" ng-model="user.ethnicityCode">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="N/A">N/A</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                I consent to the statement being disclosed for the purposes of civil, or other
+                                proceedings if applicable, e.g. child care proceedings, CICA
+                                <select class="form-control" ng-model="user.ethnicityCode">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="N/A">N/A</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="box" style="background-color: #FCFFCE;">
+                        <h4>Child and young person witness cases only (i.e. witness under 18 yrs)</h4>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    I have had provisions regarding reporting restrictions explained to me:
+                                    <select class="form-control" ng-model="user.ethnicityCode">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    I would like the CPS to apply for reporting restrictions on my behalf:
+                                    <select class="form-control" ng-model="user.ethnicityCode">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:10px;margin-bottom:10px;">
+                        <em>‘I understand that the information recorded above will be passed on to the Witness Service, which offers help and support to witnesses pre-trial and at court’    </em>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>
+                                Address and telephone number (of parent etc.), if different from above
+                                <input type="text" class="form-control">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+               
                 <div class="form-group">
-                    <label for="fn">First Name:</label>
+                    <div class="col-xs-12">
+                        <label>
+                            Statement taken by
+                            <input type="text" class="form-control">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label>
+                            Station
+                            <input type="text" class="form-control">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label>
+                            Time and place statement taken
+                            <input type="text" class="form-control">
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <!--<form role="form">
+                <div class="form-group">
                     <input type="text" class="form-control" id="fn" ng-model="user.firstName">
                 </div>
                 <div class="form-group">
@@ -28,8 +295,15 @@
                     <input type="text" class="form-control" id="mn" ng-model="user.middleName">
                 </div>
 
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+
                 <button type="submit" class="btn btn-default" ng-click="SubmitForm(user)">Submit</button>
-            </form>
+            </form>-->
         </div>
     </div>
 
