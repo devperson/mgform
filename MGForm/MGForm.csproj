@@ -33,8 +33,18 @@
   <ItemGroup>
     <Compile Include="MGForm.cs" />
     <Compile Include="Models\WitnessContacts.cs" />
+    <Compile Include="Models\WitnessMesureDetails.cs" />
     <Compile Include="Pages\FirstForm.xaml.cs">
       <DependentUpon>FirstForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MG11Form.xaml.cs">
+      <DependentUpon>MG11Form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MG2Form.xaml.cs">
+      <DependentUpon>MG2Form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MG4AForm.xaml.cs">
+      <DependentUpon>MG4AForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,5 +98,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MG2Form.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MG11Form.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MG4AForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ namespace MGForm
 		public App ()
 		{
 			// The root page of your application
-            MainPage = new FirstForm();
+            MainPage = new NavigationPage(new FirstForm());
 		}
 
 		protected override void OnStart ()

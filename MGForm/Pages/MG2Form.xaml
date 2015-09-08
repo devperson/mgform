@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="MGForm.Pages.MG2Form">
+  <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="4">
+    <controls:HybridWebView x:Name="hybridWebView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    </controls:HybridWebView>
+    <Button x:Name="btnShowMsg" Text="Save changes"/>
+  </StackLayout>
+</ContentPage>
