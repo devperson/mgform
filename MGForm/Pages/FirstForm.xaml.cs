@@ -22,23 +22,23 @@ namespace MGForm.Pages
         {
             InitializeComponent();
 
-            btnShowMsg.Clicked += (s, e) =>
+            btnForm11.Clicked += (s, e) =>
             {
-                this.hybridWebView.CallJsFunction("onSaveData");
+                this.Navigation.PushAsync(new MG11Form());
+            };
+
+            btnForm2.Clicked += (s, e) =>
+            {
+                this.Navigation.PushAsync(new MG2Form());
+            };
+
+            btnForm4A.Clicked += (s, e) =>
+            {
+                this.Navigation.PushAsync(new MG19Form());
             };
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            this.hybridWebView.RegisterCallback("dataCallback", t =>
-            {
-                var data = JsonConvert.DeserializeObject<WitnessContacts>(t);
-                DisplayAlert("MG11 form", "The Statement has been saved!", "Close");
-            });
-            this.hybridWebView.LoadFromContent("Html/Form.html");
-        }
+       
     }
 
     

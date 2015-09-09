@@ -142,6 +142,8 @@
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\bootstrap.js" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\bootstrap.min.js" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\npm.js" />
+    <AndroidAsset Include="Assets\Html\MG2-Form.html" />
+    <AndroidAsset Include="Assets\Html\MG19-Form.html" />
     <Content Include="Libs\XLabs.Core.dll" />
     <Content Include="Libs\XLabs.Forms.dll" />
     <Content Include="Libs\XLabs.Forms.Droid.dll" />
@@ -150,7 +152,7 @@
     <Content Include="Libs\XLabs.Platform.Droid.dll" />
     <Content Include="Libs\XLabs.Serialization.dll" />
     <Content Include="Libs\XLabs.Serialization.ServiceStack.Droid.dll" />
-    <AndroidAsset Include="Assets\Html\Form.html" />
+    <AndroidAsset Include="Assets\Html\MG11-Form.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.4.4.6392\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.4.6392\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

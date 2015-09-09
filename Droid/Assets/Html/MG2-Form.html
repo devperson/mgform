@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html ng-app="clientApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>HTML Form</title>
+    <link rel='stylesheet' href='content/bootstrap/css/bootstrap.min.css' />    
+    <style>
+        .box{
+            background-color:#F7F5F5; 
+            border: 1px solid#E6E6E6;
+            border-radius: 4px 4px 0 0;
+            padding: 15px;           
+        }
+    </style>
+
+    <script language="javascript">
+    function onSaveData() {
+        var user = angular.element('#indexController').scope().GetUser();
+        Native("dataCallback", user);
+    }
+    </script>
+
+</head>
+<body class="container-fluid" style="padding:5px; background-color: #FDFDFD;">    
+    <div id="indexController" data-ng-controller="indexController">
+        <div class="container-fluid" style="padding:0">
+            <form role="form" class="form-horizontal">
+                <center>
+                    <h4>
+
+                        <strong>
+                            WITNESS ASSESSMENT FOR SPECIAL MEASURES</br>
+                            Information required for an application to the court by the CPS</br>
+                                (Anticipated not guilty plea only)
+                        </strong>
+
+                    </h4>
+                    
+                </center>
+                <div class="box">
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Name of witness: </label><input type="text" class="form-control" ng-model="user.Name"></div>
+                        <div class="col-xs-6"><label>URN</label><input type="text" class="form-control" ng-model="user.URN"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Age:</label><input type="text" class="form-control" ng-model="user.Age"></div>
+                        <div class="col-xs-6"><label>Date of Birth: </label><input type="date" class="form-control" ng-model="user.DateOfBirth"></div>
+                    </div>
+                </div>
+                
+                <h4>
+                    <strong>
+                        <u>1.Identification of Witness (one form per witness)</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <strong>Vulnerable:</strong>
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Youth under 18 *
+                                    <select class="form-control" ng-model="user.Under18">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Witness with a mental disorder
+                                    <select class="form-control" ng-model="user.MentalDisorder">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                       witness with learning disabilities
+                                    <select class="form-control" ng-model="user.LearningDisabilities">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Witness with physical disability/ disorder
+                                    <select class="form-control" ng-model="user.PhysicalDisability">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <em>Select yes whichever box(es) below apply to the witness </em>
+                </div>
+                <div class="box" style="margin-top:15px;">
+                    <strong>Intimidated:</strong>
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Witness in fear/distress about giving evidence
+                                    <select class="form-control" ng-model="user.FearToGivingEvidence">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Complainant in sexual case *
+                                    <select class="form-control" ng-model="user.Complainant">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Weapons offence
+                                    <select class="form-control" ng-model="user.WeaponsOffence">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <em>Select yes whichever box(es) below apply to the witness </em>
+                </div>
+
+                
+
+                <h4>
+                    <strong>
+                        <u>3. Special Measures</u>
+                    </strong>
+                </h4>
+                <div class="box" style="margin-top:15px;">
+                    <strong>Explain to the witness what is meant by ‘Special Measures’, the measures that may be available and what this would involve for them.</strong>
+                    <em>Tick below the measure(s) which would be likely to maximise, so far as practicable, the quality of their evidence.</em><br />
+                    <br /><em>Consider: the needs of the witness, age, development or disability, communication difficulties, the state of mind (distress, shock); the type and severity and/or the circumstances of the offence (offender known to the witness); the purpose and likely value of a visually recorded interview on this occasion, perceived fears about intimidation and recrimination.</em>
+
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                           
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Screening witness from defendant
+                                    <select class="form-control" ng-model="user.ScreeningWitness">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Evidence by live link
+                                    <select class="form-control" ng-model="user.EvidenceByLiveLink">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Evidence in private
+                                    <select class="form-control" ng-model="user.EvidenceInPrivate">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Removal of wigs & gowns
+                                    <select class="form-control" ng-model="user.RemovalOfWigs">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Visually recorded interview as evidence-in-chief
+                                    <select class="form-control" ng-model="user.VisuallyRecorded">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Intermediary
+                                    <select class="form-control" ng-model="user.Intermediary">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Aids to communication
+                                    <select class="form-control" ng-model="user.AidsToCommunication">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>4. Witness views</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <strong>What views has the witness/person acting on his/her behalf expressed about:</strong>
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    His/her eligibility? 
+                                    <input type="text" class="form-control" ng-model="user.Eligibility">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Whether Special Measures would be likely to improve the quality of his/her evidence?     
+                                    <input type="text" class="form-control" ng-model="user.ImproveQuality">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    The measure(s) proposed?      
+                                    <input type="text" class="form-control" ng-model="user.MeasureProposed">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>5. Views of any other interested parties/agencies involved</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    e.g. Parent/guardian, Doctor, Social Services, schools, etc. (include contact details and address(es).
+                                    <input type="text" class="form-control" ng-model="user.InterestedParties">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Is there any other supporting material attached? .  If ‘Yes’ please list:
+                                    <input type="text" class="form-control" ng-model="user.MaterialAttached">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h4>
+                    <strong>
+                        <u>6. Special Measures Meeting</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12">
+                                    Is a Special Measures Meeting required?   
+                                    <select class="form-control" ng-model="user.MeasuresMeetingRequired">
+                                        <option value="Yes">Yes/No</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>Assessing Officer:</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Name: </label><input type="text" class="form-control" ng-model="user.OfficerName"></div>
+                        <div class="col-xs-6"><label>Rank:</label><input type="number" class="form-control" ng-model="user.OfficerRank"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Date:</label><input type="date" class="form-control" ng-model="user.OfficerDate"></div>
+                        <div class="col-xs-6"><label>Tel.: </label><input type="tel" class="form-control" ng-model="user.OfficerTel"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Mob:</label><input type="tel" class="form-control" ng-model="user.OfficerMobile"></div>
+                        <div class="col-xs-6"><label>E-mail: </label><input type="email" class="form-control" ng-model="user.OfficerEmail"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/indexController.js"></script>
+</body>
+</html>

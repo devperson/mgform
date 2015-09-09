@@ -9,7 +9,7 @@ namespace MGForm.Models
     public class WitnessContacts
     {
         public string Name { get; set; }
-        public int HomeAdr { get; set; }
+        public string HomeAdr { get; set; }
         public string HomePhone { get; set; }
         public string WorkPhone { get; set; }
         public string MobilePhone { get; set; }
@@ -22,15 +22,16 @@ namespace MGForm.Models
         public string FormerName { get; set; }
         public string EthnicityCode { get; set; }
         public string NonAvalability { get; set; }
-        public bool IsWitnessAttendCourt { get; set; }
-        public bool WhatToEnsureAttendence { get; set; }
-        public bool RequireSpecialAssesment { get; set; }
-        public bool HasParticularNeeds { get; set; }
+        public string IsWitnessAttendCourt { get; set; }
+        public string WhatToEnsureAttendence { get; set; }
+        public string RequireSpecialAssesment { get; set; }
+        public string HasParticularNeeds { get; set; }
         public string ParticularNeeds { get; set; }
-        public bool VictimsPersonalStatementExplained { get; set; }
-        public bool HasLeaFletOfVictimsPersonalStatement { get; set; }
-        public bool HasLeaFletOfWitnessToPolice { get; set; }
+        public string VictimsPersonalStatementExplained { get; set; }
+        public string HasLeaFletOfVictimsPersonalStatement { get; set; }
+        public string HasLeaFletOfWitnessToPolice { get; set; }
         public string ConsentMedicalRecord { get; set; }
+        public string ConsentToDiscloseMedicalRecord { get; set; }
         public string ConsentToDiscloseStatement { get; set; }
         public string HadProvisions { get; set; }
         public string ApplyCSP { get; set; }
