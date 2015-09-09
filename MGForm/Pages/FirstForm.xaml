@@ -7,7 +7,7 @@
   <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="4">
     <Button x:Name="btnForm11" Text="MG11 Form"/>
     <Button x:Name="btnForm2" Text="MG02 Form"/>
-    <Button x:Name="btnForm4A" Text="MG4A Form"/>
+    <Button x:Name="btnForm4A" Text="MG19 Form"/>
   </StackLayout>
   
 </ContentPage>

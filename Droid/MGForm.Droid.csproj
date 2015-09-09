@@ -143,6 +143,7 @@
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\bootstrap.min.js" />
     <AndroidAsset Include="Assets\Html\content\bootstrap\js\npm.js" />
     <AndroidAsset Include="Assets\Html\MG2-Form.html" />
+    <AndroidAsset Include="Assets\Html\MG19-Form.html" />
     <Content Include="Libs\XLabs.Core.dll" />
     <Content Include="Libs\XLabs.Forms.dll" />
     <Content Include="Libs\XLabs.Forms.Droid.dll" />

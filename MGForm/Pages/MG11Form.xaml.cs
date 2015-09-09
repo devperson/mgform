@@ -15,6 +15,11 @@ namespace MGForm.Pages
         {
             InitializeComponent();
 
+            btnShowMsg.Clicked += (s, e) =>
+            {
+                this.hybridWebView.CallJsFunction("onSaveData");
+            };
+
             this.hybridWebView.RegisterCallback("dataCallback", t =>
             {
                 var witnessContacts = JsonConvert.DeserializeObject<WitnessContacts>(t);

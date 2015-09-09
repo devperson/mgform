@@ -9,9 +9,9 @@ using Xamarin.Forms;
 
 namespace MGForm.Pages
 {
-    public partial class MG2Form : ContentPage
+    public partial class MG19Form : ContentPage
     {
-        public MG2Form()
+        public MG19Form()
         {
             InitializeComponent();
 
@@ -22,9 +22,9 @@ namespace MGForm.Pages
 
             this.hybridWebView.RegisterCallback("dataCallback", t =>
             {
-                var witnessContacts = JsonConvert.DeserializeObject<WitnessMesureDetails>(t);
+                var witnessContacts = JsonConvert.DeserializeObject<Compensation>(t);
 
-                DisplayAlert("MG02 form", "The Statement has been saved!", "Close");
+                DisplayAlert("MG19 form", "The Statement has been saved!", "Close");
             });
         }
 
@@ -33,7 +33,7 @@ namespace MGForm.Pages
             base.OnAppearing();
 
 
-            this.hybridWebView.LoadFromContent("Html/MG2-Form.html");
+            this.hybridWebView.LoadFromContent("Html/MG19-Form.html");
         }
     }
 }

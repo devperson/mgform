@@ -34,7 +34,7 @@ namespace MGForm.Pages
 
             btnForm4A.Clicked += (s, e) =>
             {
-                this.Navigation.PushAsync(new MG4AForm());
+                this.Navigation.PushAsync(new MG19Form());
             };
         }
 

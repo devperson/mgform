@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html ng-app="clientApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>HTML Form</title>
+    <link rel='stylesheet' href='content/bootstrap/css/bootstrap.min.css' />
+    <style>
+        .box {
+            background-color: #F7F5F5;
+            border: 1px solid#E6E6E6;
+            border-radius: 4px 4px 0 0;
+            padding: 15px;
+        }
+    </style>
+
+    <script language="javascript">
+        function onSaveData() {
+            var user = angular.element('#indexController').scope().GetUser();
+            Native("dataCallback", user);
+        }
+    </script>
+
+</head>
+<body class="container-fluid" style="padding:5px; background-color: #FDFDFD;">
+    <div id="indexController" data-ng-controller="indexController">
+        <div class="container-fluid" style="padding:0">
+            <form role="form" class="form-horizontal">
+                <center>
+                    <h4>
+
+                        <strong>
+                            APPLICATION FOR COMPENSATION
+                        </strong>
+
+                    </h4>
+
+                </center>
+                <h4>
+                    <strong>
+                        <u>For Police Use</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>R v: </label><input type="text" class="form-control" ng-model="user.RV"></div>
+                        <div class="col-xs-6"><label>URN</label><input type="text" class="form-control" ng-model="user.URN"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Offence:</label><input type="text" class="form-control" ng-model="user.Offence"></div>
+                        <div class="col-xs-6"><label>Date of offence: </label><input type="date" class="form-control" ng-model="user.DateOffence"></div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>Compensation form – notes for guidance</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12"><label>For queries regarding completion of this form, contact:</label><input type="text" class="form-control" ng-model="user.Queries"></div>
+                        </div>
+                    </div>
+                    <em>The offence for which proceedings have been instituted may give rise to the question of compensation. The relevant sections of pages 2-4 of this form should be completed clearly in <strong>BLOCK CAPITALS </strong> and returned to police in the Freepost envelope provided.</em>
+                    <br /><em><strong>COMPLETE THE SECTIONS WHICH APPLY TO YOU IN BLOCK CAPITALS, then sign and date page 3.</strong></em>
+                    <br /><em>It is very important that this form is completed as soon as possible. If sent to you by post it must be returned within 14 days. Failure to return this form on time may lead to the case proceeding without an application for compensation being made on your behalf. If you do find that you require extra time, please contact the case clerk to see if an extension is possible.</em>
+                    <div class="box" style="background-color: #FCFFCE;">
+                        <h4>PLEASE NOTE: the court will decide whether or not to order compensation. The Police have no authority over this decision.</h4>
+                    </div>
+                    <em>Personal injury claims can also be pursued via the Criminal Injuries Compensation Authority.</em>
+
+
+                </div>
+                <h4>
+                    <strong>
+                        <u>A. Property stolen (and not recovered) or damaged</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <em>This section covers property stolen or damaged that has not been recovered by police. It includes damage caused in a road traffic collision. It is important that you provide documentary evidence to support your claim. This means that copies of receipts, estimates or bills should be provided wherever possible. Property recovered by police but not yet returned to you (due to it being used in evidence) should not be claimed for, as this will be restored upon completion of the court case. If your case involves a road collision, it is important that you provide us with details of your insurance company so we can liaise with them during the prosecution.</em>
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0; padding-right:0">
+                                    Name and address of your insurance company:
+                                    <input type="text" class="form-control" ng-model="user.InsuranceDetails">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0; padding-right:0">
+                                    Policy No.:
+                                    <input type="number" class="form-control" ng-model="user.PolicyNo">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label style="margin-top:20px;">
+                                    Description of item(s) stolen/damaged:
+                                    <input type="text" class="form-control" ng-model="user.Name">
+                                </label>
+                            </div>
+                            <div class="col-xs-6">
+                                <label>
+                                    Costs of replacement or repair (including VAT).
+                                    <input type="number" class="form-control" ng-model="user.URN">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label>
+
+                                </label>
+                            </div>
+                            <div class="col-xs-6">
+                                <label>
+                                    Total:
+                                    <input type="number" class="form-control" ng-model="user.EffectOnEvidence">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>B. Other expenses incurred as a result of the offence</u>
+                    </strong>
+                </h4>
+                <div class="box" style="margin-top:15px;">
+                    <em>This relates to any loss of earnings (if you had to take unpaid time off work due to injuries sustained), taxi fares or hospital expenses incurred as a result of your injuries. It is important that you provide documentary evidence to support your claim. This means copies of receipts, estimates or bills should be provided wherever possible.</em>
+                    <div style="padding-top:20px;">
+                        <div class="form-group">
+                            <div class="col-xs-6"><label>Details of loss/expense: </label><input type="text" class="form-control" ng-model="user.Name"></div>
+                            <div class="col-xs-6"><label style="margin-top:19px">Amount:</label><input type="number" class="form-control" ng-model="user.URN"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label>
+
+                                </label>
+                            </div>
+                            <div class="col-xs-6">
+                                <label>
+                                    Total:
+                                    <input type="number" class="form-control" ng-model="user.EffectOnEvidence">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>C. Personal injury </u>
+                    </strong>
+                    (include an injury sustained as a result of a road traffic collision)
+                </h4>
+                <div class="box">
+                    <em>This relates to any injury sustained as the result of an assault or traffic collision. In serious injury cases, where you may suffer long-term effects, please keep the WCU informed of your condition as the case progresses. The police can only obtain medical evidence on your behalf if you have signed a medical consent form which authorises us to do so. We can then contact the hospital, your GP or dentist and ask them to provide a statement detailing your injuries and treatment. The police officer in charge may have already asked you to complete a form. If not, please contact the WCU as soon as possible.</em>
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Describe your injuries:
+                                    <input type="text" class="form-control" ng-model="user.Injuries">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Details of medical treatment received:
+                                    <input type="text" class="form-control" ng-model="user.TreatmentReceived">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Date(s) of hospital attendance:
+                                    <input type="date" class="form-control" ng-model="user.DateOfHospitalAttendance">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Name of consultant/doctor:
+                                    <input type="text" class="form-control" ng-model="user.Doctor">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>D. Insurance details</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Name of insurance company:
+                                    <input type="text" class="form-control" ng-model="user.InsuranceCompany">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Address of insurance company:
+                                    <input type="text" class="form-control" ng-model="user.InsuranceAddress">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Policy number:
+                                    <input type="text" class="form-control" ng-model="user.InsurancePolicyNumber">
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="col-xs-6" style="padding-left:0;padding-right:0;">
+                                    <label>
+                                        Loss of ‘no claims bonus’?(If ‘Yes’, please give amount)
+                                        <select class="form-control" ng-model="user.LossOf">
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="col-xs-6" style="padding-right:0;">
+                                    <label style="margin-top:40px;">
+                                        Amount:
+                                        <input type="number" class="form-control" ng-model="user.LossOfAmount">
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="col-xs-6" style="padding-left:0;padding-right:0;">
+                                    <label>
+                                        Excess on policy(If ‘Yes’, please give amount)
+                                        <select class="form-control" ng-model="user.ExcessOnPolicy">
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </label>
+
+                                </div>
+                                <div class="col-xs-6" style="padding-right:0;">
+                                    <label style="margin-top:20px;">
+                                        Amount:
+                                        <input type="number" class="form-control" ng-model="user.ExcessAmount">
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                    Confirmatory letter from insurance company attached?
+                                    <select class="form-control" ng-model="user.ConfirmatoryLetterAttached">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>
+                    <strong>
+                        <u>Details of claimant</u>
+                    </strong>
+                </h4>
+                <div class="box">
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Name: </label><input type="text" class="form-control" ng-model="user.ClaimantName"></div>
+                        <div class="col-xs-6"><label>Address:</label><input type="text" class="form-control" ng-model="user.ClaimantAddress"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6"><label>Home Tel.:</label><input type="tel" class="form-control" ng-model="user.ClaimantTel"></div>
+                        <div class="col-xs-6"><label>Mob: </label><input type="tel" class="form-control" ng-model="user.ClaimantMobile"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12"><label>E-mail: </label><input type="email" class="form-control" ng-model="user.ClaimantEmail"></div>
+                    </div>
+                </div>
+                <div class="box" style="background-color: #FCFFCE; margin-top:20px;">
+                    <strong>Personal Statement (VPS)</strong> <br />You have the right to make a VPS. This is a record of the impact that the crime has had on you and your family. It gives you a chance to explain, in your own words, how the crime has affected you, whether physically, emotionally, financially or in any other way. If you have not already made a VPS and you wish to do so, liaise with the contact on page 1.
+                </div>
+
+                <h4 style="margin-top:40px;">
+                    <strong>
+                        <u>Details of doctor / dentist (personal injury cases ONLY)</u>
+                    </strong>
+                </h4>
+                <div class="box" >
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    Did you attend Accident and Emergency as a result of your injuries?
+                                    <select class="form-control" ng-model="user.AttendAccidentAndEmergency">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box" style="background-color: #EFF3FF; margin-top:20px;">
+                            <h4>If “Yes”, please confirm:</h4>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Hospital:
+                                        <input type="text" class="form-control" ng-model="user.ConfirmAttendedHospital">
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Date of attendance:
+                                        <input type="date" class="form-control" ng-model="user.DateOfAttendance">
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Doctor’s name if known:
+                                        <input type="text" class="form-control" ng-model="user.DoctorName">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box" style="margin-top:20px;">
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    Were you referred to a specialist / other department?
+                                    <select class="form-control" ng-model="user.ReferredToSpecialist">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box" style="background-color: #EFF3FF; margin-top:20px;">
+                            <h4>If “Yes”, please confirm:</h4>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Hospital:
+                                        <input type="text" class="form-control" ng-model="user.ReferredHospital">
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Date(s) of re-attendance(s):
+                                        <input type="date" class="form-control" ng-model="user.ReferredDate">
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Doctor/dentist’s name if known or department:
+                                        <input type="text" class="form-control" ng-model="user.ReferredDoctorName">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box" style="margin-top:20px;">
+                    <div style="padding-top:20px">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>
+                                    Have you seen your GP/dentist in relation to these injuries?
+                                    <select class="form-control" ng-model="user.SeenGP">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box" style="background-color: #EFF3FF; margin-top:20px;">
+                            <h4>If “Yes”, please confirm:</h4>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        GP/dentist’s name:
+                                        <input type="text" class="form-control" ng-model="user.GPName">
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Surgery address:
+                                        <input type="text" class="form-control" ng-model="user.GPAddress">
+                                    </label>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label class="col-xs-12" style="padding-left:0;padding-right:0;">
+                                        Date of attendance(s):
+                                        <input type="date" class="form-control" ng-model="user.GPDate">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/indexController.js"></script>
+</body>
+</html>
